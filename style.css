@@ -133,3 +133,39 @@ footer {
     padding: 20px;
     margin-top: 30px;
 }
+/* ── CSS Grid Section ── */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    padding: 40px;
+    margin: 20px;
+}
+
+.grid-card {
+    background-color: #1f2a44;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card 1 - spans 2 columns */
+#card1 {
+    grid-column: span 2;
+    background-color: #4dabf7;
+    color: #1f2a44;
+}
+
+/* Card 3 - spans 2 rows */
+#card3 {
+    grid-row: span 2;
+    background-color: #69db7c;
+    color: #1f2a44;
+}
