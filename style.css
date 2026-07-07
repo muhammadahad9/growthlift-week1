@@ -226,3 +226,36 @@ header h1 {
     animation: pulse 2s ease-in-out infinite;
     margin-left: 8px;
 }
+/* ── DAY 4: Tab Switcher ── */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #ddd;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #1f2a44;
+    color: #ffffff;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: #f4f6f8;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.tab-content.active {
+    display: block;
+}
