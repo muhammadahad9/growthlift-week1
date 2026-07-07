@@ -55,3 +55,26 @@ tabs.forEach(tab => {
         document.getElementById(target).classList.add("active");
     });
 });
+
+// ── DAY 5: Fetch API + Quote Generator ──
+
+function getQuote() {
+    const quoteText = document.getElementById("quote-text");
+    quoteText.textContent = "Loading...";
+
+    fetch("https://api.quotable.io/random")
+        .then(response => response.json())
+        .then(data => {
+            quoteText.textContent = `"${data.content}" — ${data.author}`;
+        })
+        .catch(error => {
+            quoteText.textContent = "Could not load quote. Try again!";
+            console.log("Error:", error);
+        });
+}
+
+// Load quote on page start
+getQuote();
+
+// New quote on button click
+document.getElementById("new-quote").addEventListener("click", getQuote);

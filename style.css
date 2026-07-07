@@ -259,3 +259,35 @@ header h1 {
 .tab-content.active {
     display: block;
 }
+
+/* ── DAY 5: Quote Generator ── */
+#quote-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #1f2a44;
+    border-radius: 12px;
+    color: #ffffff;
+}
+
+#quote-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+#new-quote {
+    padding: 12px 28px;
+    background: #4dabf7;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#new-quote:hover {
+    background: #339af0;
+}
