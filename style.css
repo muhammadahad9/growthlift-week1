@@ -169,3 +169,60 @@ footer {
     background-color: #69db7c;
     color: #1f2a44;
 }
+/* ── DAY 2: Animations & Transitions ── */
+
+/* Step 1 - Nav links hover transition */
+nav a {
+    transition: color 0.3s ease, background 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+nav a:hover {
+    color: #ffffff;
+    background: #4dabf7;
+}
+
+/* Step 2 - Grid cards hover effect */
+.grid-section div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grid-section div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 200, 100, 0.15);
+}
+
+/* Step 3 - Hero heading animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+header h1 {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Step 4 - Pulsing dot */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+}
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00C864;
+    animation: pulse 2s ease-in-out infinite;
+    margin-left: 8px;
+}
